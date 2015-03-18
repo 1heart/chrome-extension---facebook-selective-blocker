@@ -1,0 +1,17 @@
+#pagelet_web_messenger {
+	visibility:hidden;
+	/*display:none;*/
+}
+
+
+#pagelet_dock {
+	visibility:hidden;
+	/*display:none;*/}
+
+#pagelet_sidebar {
+	visibility:hidden;
+	/*display:none;*/}
+
+.jewelContent {
+	visibility:hidden;
+	/*display:none;*/}

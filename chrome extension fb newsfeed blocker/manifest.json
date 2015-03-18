@@ -1,0 +1,36 @@
+{
+	"manifest_version": 2,
+	"name": "Facebook selective blocker",
+	"version": "0.5",
+
+	"description": "Choose which aspects of Facebook you'd like blocked in the options page, and they simply won't show up anymore.",
+	"icons":{ "48": "48.png",
+	"128": "128.png" },
+
+	"browser_action": {
+    "default_icon": "128.png",
+    "default_popup": "options.html"
+  	},
+
+	"content_scripts": [ {
+		"matches": ["https://*.facebook.com/*"],
+		"js": ["on-open.js"]
+		} ],
+
+		"background": {
+			"scripts": ["background.js"],
+			"persistent": false
+			},
+
+			"permissions":  [
+			"tabs", "https://*.facebook.com/*", "storage"
+			],
+
+			"options_page": "options.html",
+
+
+			"options_ui": {
+				"page": "options.html",
+				"chrome_style": true
+			}
+		}
